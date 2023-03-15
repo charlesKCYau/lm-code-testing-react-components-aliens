@@ -2,12 +2,13 @@ import { useState } from 'react';
 
 interface TextInputProps {
     value: string;
-    setValue: (value: string)=>void;
+    // setValue: (value: string)=>void;
+    onChange: (e: any)=>void;
 }
 
-const TextInput: React.FC<TextInputProps> = ({value: value, setValue: setValue}) => {
+const TextInput: React.FC<TextInputProps> = ({value: value, onChange: onChangeSpeciesName}) => {
     return (
-        <input className = "input" type="text" value={value} onChange={(event) => { setValue(event.target.value)}}/>
+        <input className = "input" type="text" value={value} onChange={onChangeSpeciesName} />
     );
 };
 

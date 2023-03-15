@@ -2,21 +2,20 @@ import { useState } from 'react';
 import Message from './Message';
 import TextInput from './TextInput';
 
-interface NumberOfBeingsProps {
+export interface NumberOfBeingsProps {
     noOfBeingsTextInputValue: string;
-    setNoOfBeingsTextInputValue: (noOfBeingsTextInputValue: string)=>void;
+    onChangeNoOfBeings: (e: any) => void;
     noOfBeingsWarningMsg: string;
     setNoOfBeingsWarningMsg: (noOfBeingsWarningMsg: string)=>void;
 }
 
-const NumberOfBeings: React.FC<NumberOfBeingsProps> = ({noOfBeingsTextInputValue: noOfBeingsTextInputValue, setNoOfBeingsTextInputValue: setNoOfBeingsTextInputValue, noOfBeingsWarningMsg: noOfBeingsWarningMsg, setNoOfBeingsWarningMsg: setNoOfBeingsWarningMsg}) => {
-    return (
-        <label>Number of beings:
-            <TextInput value={noOfBeingsTextInputValue} setValue={setNoOfBeingsTextInputValue} />
-            <Message message={noOfBeingsWarningMsg} setMessage={setNoOfBeingsWarningMsg} />
-        </label>
-    );
-};
+const NumberOfBeings: React.FC<NumberOfBeingsProps> = ({noOfBeingsTextInputValue, onChangeNoOfBeings, noOfBeingsWarningMsg, setNoOfBeingsWarningMsg}) => (
+    <>
+        <label htmlFor='numberOfBeings'>Number of beings:</label>
+        <TextInput value={noOfBeingsTextInputValue} onChange={onChangeNoOfBeings} />
+        <Message message={noOfBeingsWarningMsg} setMessage={setNoOfBeingsWarningMsg} />
+    </>
+);
 
 export default NumberOfBeings;
   

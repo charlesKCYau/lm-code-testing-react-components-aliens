@@ -2,21 +2,21 @@ import { useState } from 'react';
 import Message from './Message';
 import TextInput from './TextInput';
 
-interface SpeciesNameProps {
+export interface SpeciesNameProps {
     speciesNameTextInputValue: string;
-    setSpeciesTextInputValue: (speciesNameTextInputValue: string)=>void;
+    onChangeSpeciesName: (e: any) => void;
     speciesNameWarningMsg: string;
     setSpeciesNameWarningMsg: (speciesNameWarningMsg: string)=>void;
 }
 
-const SpeciesName: React.FC<SpeciesNameProps> = ({speciesNameTextInputValue, setSpeciesTextInputValue, speciesNameWarningMsg, setSpeciesNameWarningMsg}) => {
-    return (
-        <label>Species Name:
-            <TextInput value={speciesNameTextInputValue} setValue={setSpeciesTextInputValue} />
+const SpeciesName: React.FC<SpeciesNameProps> = ({speciesNameTextInputValue, onChangeSpeciesName, speciesNameWarningMsg, setSpeciesNameWarningMsg}) => (
+        <>
+            <label htmlFor='speciesName'>Species Name:</label>
+            {/* <TextInput value={speciesNameTextInputValue} setValue={setSpeciesTextInputValue} /> */}
+            <TextInput value={speciesNameTextInputValue} onChange={onChangeSpeciesName} />
             <Message message={speciesNameWarningMsg} setMessage={setSpeciesNameWarningMsg} />
-        </label>
-    );
-};
+        </>
+);
 
 export default SpeciesName;
   
