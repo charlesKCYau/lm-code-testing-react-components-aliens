@@ -20,6 +20,35 @@ test('renders form element', () => {
 	// for example, the firstChild of our container should be our form element
 	expect(container.firstChild).toHaveClass('w12MForm');
 
+	let labelNameText = screen.getByText(
+		/Species Name/i
+	);
+	expect(labelNameText).toBeInTheDocument();
+
+	labelNameText = screen.getByText(
+		/Planet Name/i
+	);
+	expect(labelNameText).toBeInTheDocument();
+
+	labelNameText = screen.getByText(
+		/Number of beings/i
+	);
+	expect(labelNameText).toBeInTheDocument();
+
+    labelNameText = screen.getByText(
+		/What is 2 \+ 2 \?/i
+	);
+	expect(labelNameText).toBeInTheDocument();
+
+    labelNameText = screen.getByText(
+		/Reason for sparing/i
+	);
+	expect(labelNameText).toBeInTheDocument();
+
+	labelNameText = screen.getByText(
+		/Submit Form/i
+	);
+	expect(labelNameText).toBeInTheDocument();
 });
 
 test('renders form objects', () => {
@@ -87,11 +116,6 @@ test('renders form objects', () => {
 		/Reason for sparing/i
 	);
 	expect(labelNameText).toBeInTheDocument();
-
-    // labelNameText = screen.getByText(
-	// 	/Submit Form/i
-	// );
-	// expect(labelNameText).toBeInTheDocument();
 
 });
 
