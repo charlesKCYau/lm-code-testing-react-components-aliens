@@ -5,7 +5,6 @@ import TextInput from './TextInput';
 export interface PlanetNameProps {
     planetTextInputValue: string;
     onChangePlanetText: (e: any) => void;
-    // setPlanetTextInputValue: (speciesNameTextInputValue: string)=>void;
     planetWarningMsg: string;
     setPlanetWarningMsg: (speciesNameWarningMsg: string)=>void;
 }

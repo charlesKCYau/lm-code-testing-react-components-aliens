@@ -3,7 +3,6 @@ import Message from './Message';
 
 export interface SparingReasonProps {
     sparingReasonInputValue: string;
-    // setSparingReasonInputValue: (sparingReasonInputValue: string)=>void;
     onChangeSparingReason: (e: any) => void;
     sparingReasonWarningMsg: string;
     setSparingReasonWarningMsg: (sparingReasonWarningMsg: string)=>void;

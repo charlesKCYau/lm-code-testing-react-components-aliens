@@ -49,7 +49,7 @@ const W12MForm = () => {
 			
 				<SparingReason sparingReasonInputValue={sparingReasonInputValue} onChangeSparingReason={(e : any) => setSparingReasonInputValue(e.target.value)}  sparingReasonWarningMsg={sparingReasonWarningMsg} setSparingReasonWarningMsg={setSparingReasonWarningMsg} />
 
-				<button className = "button" type="button" onClick={(event) => {submitForm && submitForm()}}>Submit Form</button>
+				<button className = "button" type="button" onClick={(event) => {submitForm()}}>Submit Form</button>
 			</form>
 		</section>
 	);

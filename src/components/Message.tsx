@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-interface MessageProps {
+export interface MessageProps {
     message: string;
     setMessage: (message: string)=>void;
 }
 
-const Message: React.FC<MessageProps> = ({message: message, setMessage: setMessage}) => {
+const Message: React.FC<MessageProps> = ({message, setMessage}) => {
     return (
         <div className = "message" >{message}</div>
     );

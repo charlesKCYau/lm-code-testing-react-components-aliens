@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
-interface TextInputProps {
+export interface TextInputProps {
     value: string;
-    // setValue: (value: string)=>void;
     onChange: (e: any)=>void;
 }
 
