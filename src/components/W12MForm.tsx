@@ -8,23 +8,23 @@ import ValueOfSum from './ValueOfSum';
 
 const W12MForm = () => {
     const [ speciesNameTextInputValue, setSpeciesTextInputValue ] = useState<string>('');
-    const [ speciesNameWarningMsg, setSpeciesNameWarningMsg ] = useState<string>('');
+    // const [ speciesNameWarningMsg, setSpeciesNameWarningMsg ] = useState<string>('');
     const [ planetTextInputValue, setPlanetTextInputValue ] = useState<string>('');
-    const [ planetWarningMsg, setPlanetWarningMsg ] = useState<string>('');
+    // const [ planetWarningMsg, setPlanetWarningMsg ] = useState<string>('');
     const [ noOfBeingsTextInputValue, setNoOfBeingsTextInputValue ] = useState<string>('');
-    const [ noOfBeingsWarningMsg, setNoOfBeingsWarningMsg ] = useState<string>('');
+    // const [ noOfBeingsWarningMsg, setNoOfBeingsWarningMsg ] = useState<string>('');
     const [ valueOfSum, setValueOfSum ] = useState<string>('');
-    const [ valueOfSumWarningMsg, setValueOfSumWarningMsg ] = useState<string>('');
+    // const [ valueOfSumWarningMsg, setValueOfSumWarningMsg ] = useState<string>('');
     const [ sparingReasonInputValue, setSparingReasonInputValue ] = useState<string>('');
-    const [ sparingReasonWarningMsg, setSparingReasonWarningMsg ] = useState<string>('');
+    // const [ sparingReasonWarningMsg, setSparingReasonWarningMsg ] = useState<string>('');
     
     const submitForm = () => {
-        (speciesNameTextInputValue.trim()) === "" ? setSpeciesNameWarningMsg('Species Name cannot be empty') : setSpeciesNameWarningMsg('');
-        (planetTextInputValue.trim()) === "" ? setPlanetWarningMsg('Planet Name cannot be empty') : setPlanetWarningMsg('');
-        (noOfBeingsTextInputValue.trim()) === "" ? setNoOfBeingsWarningMsg('Number of beings cannot be empty') : setNoOfBeingsWarningMsg('');
-        (!parseInt(noOfBeingsTextInputValue,10)) ? setNoOfBeingsWarningMsg('Number of beings cannot be non-integer') : setNoOfBeingsWarningMsg('');
-        (valueOfSum) !== "4" ? setValueOfSumWarningMsg('Answer is incorrect') : setValueOfSumWarningMsg('');
-        (sparingReasonInputValue.trim()) === "" ? setSparingReasonWarningMsg('Sparing Reason cannot be empty') : setSparingReasonWarningMsg('');
+        // (speciesNameTextInputValue.trim()) === "" ? setSpeciesNameWarningMsg('Species Name cannot be empty') : setSpeciesNameWarningMsg('');
+        // (planetTextInputValue.trim()) === "" ? setPlanetWarningMsg('Planet Name cannot be empty') : setPlanetWarningMsg('');
+        // (noOfBeingsTextInputValue.trim()) === "" ? setNoOfBeingsWarningMsg('Number of beings cannot be empty') : setNoOfBeingsWarningMsg('');
+        // (!parseInt(noOfBeingsTextInputValue,10)) ? setNoOfBeingsWarningMsg('Number of beings cannot be non-integer') : setNoOfBeingsWarningMsg('');
+        // (valueOfSum) !== "4" ? setValueOfSumWarningMsg('Answer is incorrect') : setValueOfSumWarningMsg('');
+        // (sparingReasonInputValue.trim()) === "" ? setSparingReasonWarningMsg('Sparing Reason cannot be empty') : setSparingReasonWarningMsg('');
         
 		console.log("Species Name: ", speciesNameTextInputValue.trim());
 		console.log("Planet Name: ", planetTextInputValue.trim());
