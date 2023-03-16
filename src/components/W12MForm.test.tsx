@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import { it } from 'node:test';
+// import { it } from 'node:test';
 import W12MForm from './W12MForm';
+import user from '@testing-library/user-event';
 
 test('renders form element', () => {
 	// we can hold onto the object returned from render()
@@ -42,3 +43,19 @@ test('renders form element', () => {
 	expect(labelNameText).toBeInTheDocument();
 });
 
+it(`When clicking the submit button, there is an alert message popping out`, async () => {
+		// const mockClick = jest.fn();
+	
+    	render(<W12MForm />);
+
+		const submitButton = screen.getAllByRole('button').find((b) => b.textContent === 'Submit Form');
+
+		expect(submitButton).toBeInTheDocument();
+		
+		if (submitButton) {
+			await user.click(submitButton);
+			
+			const newTextButton = screen.getAllByRole('button').find((b) => b.textContent === 'newText');
+			expect(newTextButton).toBeInTheDocument();
+		}
+	});

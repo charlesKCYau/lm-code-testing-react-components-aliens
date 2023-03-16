@@ -9,8 +9,8 @@ export interface SparingReasonProps {
 const SparingReason: React.FC<SparingReasonProps> = ({sparingReasonInputValue, onChangeSparingReason}) => {
         const [ errorMessage, setErrorMessage ] = useState<string | undefined>();
         const validate = (inputValue:string) => {
-            if (inputValue.length < 17) return "too short";
-            if (inputValue.length > 153) return "too long";
+            if (inputValue.length < 17) return "Too short, Reason for Sparing should be between 17 and 153";
+            if (inputValue.length > 153) return "Too long, Reason for Sparing should be between 17 and 153";
         } // some validation function here
 
     return(

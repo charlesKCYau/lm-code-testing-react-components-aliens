@@ -12,8 +12,8 @@ const SpeciesName: React.FC<SpeciesNameProps> = ({speciesNameTextInputValue, onC
     const [ errorMessage, setErrorMessage ] = useState<string | undefined>();
 	const validate = (inputValue:string) => {
         const noSpecialChars = inputValue.replace(/[^a-zA-Z ]/g, '');
-        if (inputValue.length < 3) return "too short";
-        if (inputValue.length > 23) return "too long";
+        if (inputValue.length < 3) return "Too short, Species Name should be between 3 and 23";
+        if (inputValue.length > 23) return "Too long, Species Name should be between 3 and 23";
         if (inputValue !== noSpecialChars) return "No numbers or special characters allowed";
     } // some validation function here
 
