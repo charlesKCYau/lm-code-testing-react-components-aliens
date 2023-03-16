@@ -6,8 +6,8 @@ test('renders SparingReason content', () => {
 	const sparingReasonProps: SparingReasonProps = {
 		sparingReasonInputValue: "sparingReason",
 		onChangeSparingReason: () => {},
-		sparingReasonWarningMsg: "sparingReasonWarningMsg",
-		setSparingReasonWarningMsg: () => {},
+		// sparingReasonWarningMsg: "sparingReasonWarningMsg",
+		// setSparingReasonWarningMsg: () => {},
 	}
 
 	render(<SparingReason {...sparingReasonProps}/>);
@@ -23,8 +23,8 @@ test('renders SparingReason content', () => {
 	expect(inputText).toBeInTheDocument();
 
  	//check if warning message is existed
-     const warnMsg = screen.getByText(
-		/sparingReasonWarningMsg/i
-	);
-	expect(warnMsg).toBeInTheDocument();
+    //  const warnMsg = screen.getByText(
+	// 	/sparingReasonWarningMsg/i
+	// );
+	// expect(warnMsg).toBeInTheDocument();
 });

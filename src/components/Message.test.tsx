@@ -5,7 +5,7 @@ import { MessageProps } from './Message';
 test('renders message content', () => {
     const messageProps: MessageProps = {
 		message: "message",
-		setMessage: () => {},
+		// setMessage: () => {},
 	}
 
 	render(<Message {...messageProps} />);

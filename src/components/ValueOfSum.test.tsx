@@ -6,8 +6,8 @@ test('renders SpeciesName content', () => {
 	const valueOfSumProps: ValueOfSumProps = {
 		valueOfSum: "valueOfSum",
 		onChangeSumValue: () => {},
-		valueOfSumWarningMsg: "valueOfSumWarningMsg",
-		setValueOfSumWarningMsg: () => {},
+		// valueOfSumWarningMsg: "valueOfSumWarningMsg",
+		// setValueOfSumWarningMsg: () => {},
 	}
 
 	render(<ValueOfSum {...valueOfSumProps}/>);
@@ -23,8 +23,8 @@ test('renders SpeciesName content', () => {
 	expect(dropdownlist).toBeInTheDocument();
 
  	//check if warning message is existed
-     const warnMsg = screen.getByText(
-		/valueOfSumWarningMsg/i
-	);
-	expect(warnMsg).toBeInTheDocument();
+    //  const warnMsg = screen.getByText(
+	// 	/valueOfSumWarningMsg/i
+	// );
+	// expect(warnMsg).toBeInTheDocument();
 });

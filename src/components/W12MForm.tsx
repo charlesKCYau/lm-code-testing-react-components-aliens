@@ -39,15 +39,20 @@ const W12MForm = () => {
 			{/* REST OF FORM GOES HERE */}
 			{/* <W12MFormBody {...emptyForm}/> */}
 			<form className="form__container form form__text">
-				<SpeciesName speciesNameTextInputValue={speciesNameTextInputValue} onChangeSpeciesName={(e : any) => setSpeciesTextInputValue(e.target.value)} speciesNameWarningMsg={speciesNameWarningMsg} setSpeciesNameWarningMsg={setSpeciesNameWarningMsg} />
+				{/* <SpeciesName speciesNameTextInputValue={speciesNameTextInputValue} onChangeSpeciesName={(e : any) => setSpeciesTextInputValue(e.target.value)} speciesNameWarningMsg={speciesNameWarningMsg} setSpeciesNameWarningMsg={setSpeciesNameWarningMsg} /> */}
+				<SpeciesName speciesNameTextInputValue={speciesNameTextInputValue} onChangeSpeciesName={(e : any) => setSpeciesTextInputValue(e.target.value)} />
 
-				<PlanetName planetTextInputValue={planetTextInputValue} onChangePlanetText={(e : any) => setPlanetTextInputValue(e.target.value)}  planetWarningMsg={planetWarningMsg} setPlanetWarningMsg={setPlanetWarningMsg} />
+				{/* <PlanetName planetTextInputValue={planetTextInputValue} onChangePlanetText={(e : any) => setPlanetTextInputValue(e.target.value)}  planetWarningMsg={planetWarningMsg} setPlanetWarningMsg={setPlanetWarningMsg} /> */}
+				<PlanetName planetTextInputValue={planetTextInputValue} onChangePlanetText={(e : any) => setPlanetTextInputValue(e.target.value)} />
 
-				<NumberOfBeings noOfBeingsTextInputValue={noOfBeingsTextInputValue} onChangeNoOfBeings={(e : any) => setNoOfBeingsTextInputValue(e.target.value)} noOfBeingsWarningMsg={noOfBeingsWarningMsg} setNoOfBeingsWarningMsg={setNoOfBeingsWarningMsg} />
+				{/* <NumberOfBeings noOfBeingsTextInputValue={noOfBeingsTextInputValue} onChangeNoOfBeings={(e : any) => setNoOfBeingsTextInputValue(e.target.value)} noOfBeingsWarningMsg={noOfBeingsWarningMsg} setNoOfBeingsWarningMsg={setNoOfBeingsWarningMsg} /> */}
+				<NumberOfBeings noOfBeingsTextInputValue={noOfBeingsTextInputValue} onChangeNoOfBeings={(e : any) => setNoOfBeingsTextInputValue(e.target.value)} />
 
-				<ValueOfSum valueOfSum={valueOfSum} onChangeSumValue={(e : any) => setValueOfSum(e.target.value)}  valueOfSumWarningMsg={valueOfSumWarningMsg} setValueOfSumWarningMsg={setValueOfSumWarningMsg} />
+				{/* <ValueOfSum valueOfSum={valueOfSum} onChangeSumValue={(e : any) => setValueOfSum(e.target.value)}  valueOfSumWarningMsg={valueOfSumWarningMsg} setValueOfSumWarningMsg={setValueOfSumWarningMsg} /> */}
+				<ValueOfSum valueOfSum={valueOfSum} onChangeSumValue={(e : any) => setValueOfSum(e.target.value)} />
 			
-				<SparingReason sparingReasonInputValue={sparingReasonInputValue} onChangeSparingReason={(e : any) => setSparingReasonInputValue(e.target.value)}  sparingReasonWarningMsg={sparingReasonWarningMsg} setSparingReasonWarningMsg={setSparingReasonWarningMsg} />
+				{/* <SparingReason sparingReasonInputValue={sparingReasonInputValue} onChangeSparingReason={(e : any) => setSparingReasonInputValue(e.target.value)}  sparingReasonWarningMsg={sparingReasonWarningMsg} setSparingReasonWarningMsg={setSparingReasonWarningMsg} /> */}
+				<SparingReason sparingReasonInputValue={sparingReasonInputValue} onChangeSparingReason={(e : any) => setSparingReasonInputValue(e.target.value)} />
 
 				<button className = "button" type="button" onClick={(event) => {submitForm()}}>Submit Form</button>
 			</form>

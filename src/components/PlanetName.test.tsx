@@ -6,8 +6,8 @@ test('renders PlanetName content', () => {
 	const planetNameProps: PlanetNameProps = {
 		planetTextInputValue: "planetName",
 		onChangePlanetText: () => {},
-		planetWarningMsg: "planetWarningMsg",
-		setPlanetWarningMsg: () => {},
+		// planetWarningMsg: "planetWarningMsg",
+		// setPlanetWarningMsg: () => {},
 	}
 
 	render(<PlanetName {...planetNameProps}/>);
@@ -23,8 +23,8 @@ test('renders PlanetName content', () => {
 	expect(inputText).toBeInTheDocument();
 
  	//check if warning message is existed
-     const warnMsg = screen.getByText(
-		/planetWarningMsg/i
-	);
-	expect(warnMsg).toBeInTheDocument();
+    //  const warnMsg = screen.getByText(
+	// 	/planetWarningMsg/i
+	// );
+	// expect(warnMsg).toBeInTheDocument();
 });

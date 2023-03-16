@@ -6,8 +6,8 @@ test('renders NumberOfBeings content', () => {
 	const numberOfBeingsProps: NumberOfBeingsProps = {
 		noOfBeingsTextInputValue: "noOfBeings",
 		onChangeNoOfBeings: () => {},
-		noOfBeingsWarningMsg: "noOfBeingsWarningMsg",
-		setNoOfBeingsWarningMsg: () => {},
+		// noOfBeingsWarningMsg: "noOfBeingsWarningMsg",
+		// setNoOfBeingsWarningMsg: () => {},
 	}
 
 	render(<NumberOfBeings {...numberOfBeingsProps}/>);
@@ -23,8 +23,8 @@ test('renders NumberOfBeings content', () => {
 	expect(inputText).toBeInTheDocument();
 
 	//check if warning message is existed
-    const warnMsg = screen.getByText(
-		/noOfBeingsWarningMsg/i
-	);
-	expect(warnMsg).toBeInTheDocument();
+    // const warnMsg = screen.getByText(
+	// 	/noOfBeingsWarningMsg/i
+	// );
+	// expect(warnMsg).toBeInTheDocument();
 });
