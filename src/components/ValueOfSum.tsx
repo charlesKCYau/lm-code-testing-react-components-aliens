@@ -4,17 +4,14 @@ import Message from './Message';
 export interface ValueOfSumProps {
     valueOfSum: string;
     onChangeSumValue: (e: any) => void;
-    // valueOfSumWarningMsg: string;
-    // setValueOfSumWarningMsg: (valueOfSumWarningMsg: string)=>void;
 }
 
-// const ValueOfSum: React.FC<ValueOfSumProps> = ({valueOfSum, onChangeSumValue, valueOfSumWarningMsg, setValueOfSumWarningMsg}) => {
 const ValueOfSum: React.FC<ValueOfSumProps> = ({valueOfSum, onChangeSumValue}) => {
         const [ errorMessage, setErrorMessage ] = useState<string | undefined>();
-	const validate = (inputValue:string) => {
-        if (inputValue !== '4') return "wrong answer";
+        const validate = (inputValue:string) => {
+            if (inputValue !== '4') return "wrong answer";
 
-    } // some validation function here
+        } // some validation function here
 
     return(
     <>
@@ -27,7 +24,6 @@ const ValueOfSum: React.FC<ValueOfSumProps> = ({valueOfSum, onChangeSumValue}) =
             <option value="Not4">Not 4</option>
             <option value="4">4</option>
         </select>   
-        {/* <Message message={valueOfSumWarningMsg} setMessage={setValueOfSumWarningMsg} /> */}
         <Message message={errorMessage} />
     </>
 )}

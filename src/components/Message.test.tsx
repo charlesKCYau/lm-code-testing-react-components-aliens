@@ -5,7 +5,6 @@ import { MessageProps } from './Message';
 test('renders message content', () => {
     const messageProps: MessageProps = {
 		message: "message",
-		// setMessage: () => {},
 	}
 
 	render(<Message {...messageProps} />);
@@ -13,4 +12,18 @@ test('renders message content', () => {
 		/message/i
 	);
 	expect(messageContent).toBeInTheDocument();
+});
+
+it(`Given the required props,
+		When the component is rendered,
+		Then the appointment description should be present`, () => {
+		const requiredProps : MessageProps = {
+			message: 'testing message',
+		};
+
+    	render(<Message {...requiredProps} />);
+
+    	expect(
+    		screen.getByText('testing message')
+    	).toBeInTheDocument();
 });

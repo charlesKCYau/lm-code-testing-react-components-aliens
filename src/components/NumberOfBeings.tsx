@@ -5,18 +5,15 @@ import TextInput from './TextInput';
 export interface NumberOfBeingsProps {
     noOfBeingsTextInputValue: string;
     onChangeNoOfBeings: (e: any) => void;
-    // noOfBeingsWarningMsg: string;
-    // setNoOfBeingsWarningMsg: (noOfBeingsWarningMsg: string)=>void;
 }
 
-// const NumberOfBeings: React.FC<NumberOfBeingsProps> = ({noOfBeingsTextInputValue, onChangeNoOfBeings, noOfBeingsWarningMsg, setNoOfBeingsWarningMsg}) => {
 const NumberOfBeings: React.FC<NumberOfBeingsProps> = ({noOfBeingsTextInputValue, onChangeNoOfBeings}) => {
         const [ errorMessage, setErrorMessage ] = useState<string | undefined>();
-	const validate = (inputValue:string) => {
-        const noSpecialChars = inputValue.replace(/[^0-9 ]/g, '');
-        if (parseInt(inputValue, 10) < 1000000000) return "Must be at least 1,000,000,000";
-        if (inputValue !== noSpecialChars) return "Numbers Only";
-    } // some validation function here
+	    const validate = (inputValue:string) => {
+            const noSpecialChars = inputValue.replace(/[^0-9 ]/g, '');
+            if (parseInt(inputValue, 10) < 1000000000) return "Must be at least 1,000,000,000";
+            if (inputValue !== noSpecialChars) return "Numbers Only";
+        } // some validation function here
 
     return (
     <>
@@ -26,7 +23,6 @@ const NumberOfBeings: React.FC<NumberOfBeingsProps> = ({noOfBeingsTextInputValue
 				setErrorMessage(errorMessage);
                 onChangeNoOfBeings(e);
         }} />
-        {/* <Message message={noOfBeingsWarningMsg} setMessage={setNoOfBeingsWarningMsg} /> */}
         <Message message={errorMessage} />
     </>
 )

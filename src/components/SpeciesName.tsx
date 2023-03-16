@@ -5,11 +5,8 @@ import TextInput from './TextInput';
 export interface SpeciesNameProps {
     speciesNameTextInputValue: string;
     onChangeSpeciesName: (e: any) => void;
-    // speciesNameWarningMsg: string;
-    // setSpeciesNameWarningMsg: (speciesNameWarningMsg: string)=>void;
 }
 
-// const SpeciesName: React.FC<SpeciesNameProps> = ({speciesNameTextInputValue, onChangeSpeciesName, speciesNameWarningMsg, setSpeciesNameWarningMsg}) => {
 const SpeciesName: React.FC<SpeciesNameProps> = ({speciesNameTextInputValue, onChangeSpeciesName}) => {
     
     const [ errorMessage, setErrorMessage ] = useState<string | undefined>();
@@ -18,7 +15,6 @@ const SpeciesName: React.FC<SpeciesNameProps> = ({speciesNameTextInputValue, onC
         if (inputValue.length < 3) return "too short";
         if (inputValue.length > 23) return "too long";
         if (inputValue !== noSpecialChars) return "No numbers or special characters allowed";
-
     } // some validation function here
 
     return(
