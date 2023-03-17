@@ -43,7 +43,7 @@ test('renders form element', () => {
 	expect(labelNameText).toBeInTheDocument();
 });
 
-it(`When clicking the submit button, there is an alert message popping out`, async () => {
+it(`When clicking the submit button, the button text change to newText`, async () => {
 		// const mockClick = jest.fn();
 	
     	render(<W12MForm />);
